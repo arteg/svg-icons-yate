@@ -24,7 +24,6 @@ gulp.task('clean', function(cb) {
 
 gulp.task('build:static', function() {
     return gulp.src(SRC.static)
-        .pipe(filelog())
         .pipe(changed(DEST))
         .pipe(gulp.dest(DEST));
 });
