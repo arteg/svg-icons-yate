@@ -1,0 +1,10 @@
+func svg-icon (scalar id, scalar style) {
+    if id {
+        <svg xmlns="http://www.w3.org/2000/svg" class="svgicon svgicon-{id}">
+            if (style) {
+                @style = style
+            }
+            <use xlink:href="#{id}"></use>
+        </svg>
+    }
+}
