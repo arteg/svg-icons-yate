@@ -1,6 +1,6 @@
 include 'svg-icons.yate'
 
 match / {
-    include 'out/icons/lol/lol.svg'
-    svg-icon('lol--ei-arrow-left')
+    include 'out/icons/mail/mail.svg'
+    svg-icon('mail--arrow-right')
 }
