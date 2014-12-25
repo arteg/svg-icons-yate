@@ -4,6 +4,7 @@ var rename = require('gulp-rename');
 var del = require('del');
 var gulpYate = require('./gulp-plugins/gulp-yate');
 var filelog = require("gulp-filelog");
+var open = require('open');
 var gulpGrunt = require('gulp-grunt');
 var gruntTasks = gulpGrunt.tasks();
 // add all the gruntfile tasks to gulp
@@ -15,6 +16,7 @@ var SRC = {
     static: '[!G]*.@(html|js)'
 };
 var DEST = './out/';
+var INDEX_PAGE = DEST + 'index.html';
 
 gulp.task('clean', function(cb) {
     del([
@@ -45,4 +47,8 @@ gulp.task('default', ['build']);
 gulp.task('watch', function() {
     gulp.watch(SRC.static, ['build:static']);
     gulp.watch(SRC.yate, ['build:yate']);
+});
+
+gulp.task('open-index-page', function() {
+    open(INDEX_PAGE);
 });
