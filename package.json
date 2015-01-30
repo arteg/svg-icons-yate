@@ -18,6 +18,7 @@
     "gulp-grunt": "~0.5.2",
     "yate": "0.0.76",
     "gulp-filelog": "~0.4.1",
-    "open": "0.0.5"
+    "open": "0.0.5",
+    "gulp-insert": "~0.4.0"
   }
 }
